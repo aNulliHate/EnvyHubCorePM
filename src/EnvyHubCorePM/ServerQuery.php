@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Clint Dave Luna
- * Date: 09/09/2019
- * Time: 2:36 AM
- */
 
 namespace EnvyHubCorePM;
 
