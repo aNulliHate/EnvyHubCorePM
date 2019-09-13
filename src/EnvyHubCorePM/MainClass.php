@@ -16,7 +16,7 @@ class MainClass extends PluginBase implements Listener {
     public function onEnable() {
         //
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        $this->getServer()->getPluginManager()->registerEvents(new PlayerEventListener(), $this);
+        $this->getServer()->getPluginManager()->registerEvents(new PlayerEventListener($this), $this);
 
 //        $this->getScheduler()->scheduleRepeatingTask(new UpdaterTask($this), 5 * 20);
 
@@ -30,8 +30,8 @@ class MainClass extends PluginBase implements Listener {
 
         $level = $this->getServer()->getLevelByName("hubhub");
         if ($level !== null) {
-            $factionSlapperEntity = $level->getEntity(6);
-            $skyblockSlapperEntity = $level->getEntity(4);
+            $factionSlapperEntity = $level->getEntity(4);
+            $skyblockSlapperEntity = $level->getEntity(6);
 
             if ($factionSlapperEntity !== null && $factionServerQuery->status() == "online") {
                 $name = $factionSlapperEntity->getNameTag();
